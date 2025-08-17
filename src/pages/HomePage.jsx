@@ -232,11 +232,10 @@ export default function HeroSlider() {
   </div>
 </section>
 
-
-   {/* About Us Section */}
+{/* About Us Section */}
 <section className="max-w-7xl mx-auto px-8 py-24 flex flex-col lg:flex-row items-center gap-20 bg-gradient-to-tr from-white via-gray-50 to-white relative overflow-hidden">
-  {/* Left Content */}
-  <div className="flex-1 max-w-xl relative z-20 space-y-6 order-2 lg:order-1">
+  {/* Left Content (Text first on mobile) */}
+  <div className="flex-1 max-w-xl relative z-20 space-y-6 order-1 lg:order-1">
     <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight relative">
       About Us
       <span className="block h-1 w-24 bg-gradient-to-r from-[#F16B6B] to-[#D45959] rounded-full mt-2"></span>
@@ -254,8 +253,8 @@ export default function HeroSlider() {
     </p>
   </div>
 
-  {/* Right Image */}
-  <div className="flex-1 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative z-10 order-1 lg:order-2">
+  {/* Right Image (Second on mobile) */}
+  <div className="flex-1 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative z-10 order-2 lg:order-2">
     <img
       src="/images/int3.jpg"
       alt="Luxury Living Room"
@@ -264,6 +263,7 @@ export default function HeroSlider() {
     />
   </div>
 </section>
+
 
    <section className="bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto text-center px-6">
