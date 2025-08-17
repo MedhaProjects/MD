@@ -17,8 +17,8 @@ export default function Navbar() {
 
   return (
     <nav className="relative bg-white shadow-md sticky top-0 z-50 font-sans overflow-hidden">
-      {/* SVG decorations inside navbar container */}
-      <div className="absolute inset-0 pointer-events-none select-none">
+      {/* SVG decorations - visible only on md and above */}
+      <div className="absolute inset-0 pointer-events-none select-none md:block hidden">
         {/* Left side soft pink gradient circle */}
         <svg
           className="absolute top-1/2 left-4 w-32 h-32 -translate-y-1/2 opacity-20"
