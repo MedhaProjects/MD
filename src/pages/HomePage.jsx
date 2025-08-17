@@ -144,99 +144,94 @@ export default function HeroSlider() {
 
   return (
     <div className="relative min-h-screen bg-white text-gray-900 font-sans select-none">
-      {/* Hero Slider */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        {slides.map((slide, i) => {
-          const active = i === current;
-          return (
-            <img
-              key={i}
-              src={slide.img}
-              alt={slide.title}
-              draggable={false}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
-                active ? "opacity-100 scale-105" : "opacity-0 scale-100"
-              }`}
-              style={{ willChange: "opacity, transform" }}
-            />
-          );
-        })}
+    {/* Hero Slider */}
+<section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+  {slides.map((slide, i) => {
+    const active = i === current;
+    return (
+      <img
+        key={i}
+        src={slide.img}
+        alt={slide.title}
+        draggable={false}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
+          active ? "opacity-100 scale-105" : "opacity-0 scale-100"
+        }`}
+        style={{ willChange: "opacity, transform" }}
+      />
+    );
+  })}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/70" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/70" />
 
-        <div
-          className={`absolute inset-0 flex flex-col items-center justify-center text-center px-6 max-w-xl mx-auto text-white drop-shadow-lg
-            transition-all duration-500 ease-in-out
-            ${
-              textVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
-        >
-          <h1 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
-            {slides[current].title}
-          </h1>
-          <p className="mt-4 text-lg opacity-95">
-            {slides[current].description}
-          </p>
-          <Link
-  to={BUTTON_URL}
-  className="px-6 py-3 rounded-xl text-white font-medium shadow-lg transition-transform hover:scale-105 flex items-center justify-center"
-  style={{ background: "#F16B6B" }}
->
-  Explore Now
-</Link>
+  <div
+    className={`absolute inset-0 flex flex-col items-center justify-center text-center px-6 max-w-xl mx-auto text-white drop-shadow-lg
+      transition-all duration-500 ease-in-out
+      ${textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+  >
+    <h1 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+      {slides[current].title}
+    </h1>
+    <p className="mt-4 text-lg opacity-95">{slides[current].description}</p>
+    <Link
+      to={BUTTON_URL}
+      className="px-6 py-3 rounded-xl text-white font-medium shadow-lg transition-transform hover:scale-105 flex items-center justify-center"
+      style={{ background: "#F16B6B" }}
+    >
+      Explore Now
+    </Link>
+  </div>
 
-        </div>
+  {/* Navigation Buttons */}
+  <button
+    aria-label="Previous Slide"
+    onClick={prevSlide}
+    className="hidden md:block absolute left-6 top-[40%] -translate-y-1/2 bg-white bg-opacity-25 hover:bg-gradient-to-r hover:from-[#F16B6B] hover:to-[#D45959] hover:text-white text-gray-900 rounded-full p-3 shadow-lg transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
 
-        {/* Navigation */}
-        <button
-          aria-label="Previous Slide"
-          onClick={prevSlide}
-          className="absolute left-6 top-[40%] -translate-y-1/2 bg-white bg-opacity-25 hover:bg-gradient-to-r hover:from-[#F16B6B] hover:to-[#D45959] hover:text-white text-gray-900 rounded-full p-3 shadow-lg transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+  <button
+    aria-label="Next Slide"
+    onClick={nextSlide}
+    className="hidden md:block absolute right-6 top-[40%] -translate-y-1/2 bg-white bg-opacity-25 hover:bg-gradient-to-r hover:from-[#F16B6B] hover:to-[#D45959] hover:text-white text-gray-900 rounded-full p-3 shadow-lg transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
 
-        <button
-          aria-label="Next Slide"
-          onClick={nextSlide}
-          className="absolute right-6 top-[40%] -translate-y-1/2 bg-white bg-opacity-25 hover:bg-gradient-to-r hover:from-[#F16B6B] hover:to-[#D45959] hover:text-white text-gray-900 rounded-full p-3 shadow-lg transition"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+  {/* Navigation Dots */}
+  <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
+    {slides.map((_, i) => (
+      <button
+        key={i}
+        onClick={() => goToSlide(i)}
+        aria-label={`Go to slide ${i + 1}`}
+        className={`w-4 h-4 rounded-full border-2 border-white transition-colors duration-300 ${
+          i === current ? "bg-white" : "bg-white/30 hover:bg-white/60"
+        }`}
+      />
+    ))}
+  </div>
+</section>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goToSlide(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`w-4 h-4 rounded-full border-2 border-white transition-colors duration-300 ${
-                i === current ? "bg-white" : "bg-white/30 hover:bg-white/60"
-              }`}
-            />
-          ))}
-        </div>
-      </section>
 
       {/* About Us Section */}
       <section className="max-w-7xl mx-auto px-8 py-24 flex flex-col lg:flex-row items-center gap-20 bg-gradient-to-tr from-white via-gray-50 to-white relative overflow-hidden">
