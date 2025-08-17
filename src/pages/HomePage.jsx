@@ -246,7 +246,7 @@ export default function HeroSlider() {
     </h3>
 
     <p className="text-gray-700 text-lg leading-relaxed">
-      At <span className="font-semibold text-[#F16B6B]">Luxora Interiors</span>, we craft interiors that tell your story — blending luxurious comfort with artistic precision.
+      At <span className="font-semibold text-[#F16B6B]">Matasya Interiors</span>, we craft interiors that tell your story — blending luxurious comfort with artistic precision.
     </p>
     <p className="text-gray-700 text-lg leading-relaxed">
       From bespoke furniture to elegant finishes, our expert team works hand-in-hand with you to bring your vision to life.
