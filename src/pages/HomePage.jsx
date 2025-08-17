@@ -404,11 +404,10 @@ export default function HeroSlider() {
       ))}
     </div>
   </div>
-</section>
-{/* 3-Step Process - Image Right, Content Left */}
+</section>{/* 3-Step Process - Image Right, Content Left */}
 <section className="bg-gray-50 py-16 px-6 sm:px-12 lg:px-20">
   <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-12 text-center tracking-tight">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-12 text-center tracking-tight">
       Transform Your Space in 3 Simple Steps
     </h2>
 
@@ -434,11 +433,16 @@ export default function HeroSlider() {
 
       {/* Step Content */}
       <div className="lg:w-1/2 w-full p-8 sm:p-10 flex flex-col justify-center">
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mt-4 mb-4">
           Step {currentStep}
         </h3>
-        <p className="text-gray-700 text-lg sm:text-xl md:text-2xl leading-relaxed mb-6">
-          {steps[currentStep - 1].description}
+        <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6">
+          {currentStep === 1 &&
+            "Step 1: Evaluate your space thoroughly. Take measurements, assess the lighting, and think about the colors and styles that resonate with your personality. Planning at this stage ensures a smooth transformation."}
+          {currentStep === 2 &&
+            "Step 2: Select your furniture and decor. Choose pieces that complement your space and reflect your style. Consider functionality, comfort, and aesthetics to create a cohesive and inviting environment."}
+          {currentStep === 3 &&
+            "Step 3: Implement and refine. Arrange your furniture, hang artwork, and add finishing touches. Pay attention to details like textures, lighting, and accessories. Make adjustments as needed to achieve the perfect balance."}
         </p>
 
         {/* Buttons */}
@@ -479,6 +483,7 @@ export default function HeroSlider() {
     </div>
   </div>
 </section>
+
 
 
 
