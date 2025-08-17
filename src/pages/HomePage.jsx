@@ -233,38 +233,38 @@ export default function HeroSlider() {
 </section>
 
 
-      {/* About Us Section */}
-      <section className="max-w-7xl mx-auto px-8 py-24 flex flex-col lg:flex-row items-center gap-20 bg-gradient-to-tr from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Left Image */}
-        <div className="flex-1 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative z-10">
-          <img
-            src="/images/int3.jpg"
-            alt="Luxury Living Room"
-            className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
-            loading="lazy"
-          />
-        </div>
+   {/* About Us Section */}
+<section className="max-w-7xl mx-auto px-8 py-24 flex flex-col lg:flex-row items-center gap-20 bg-gradient-to-tr from-white via-gray-50 to-white relative overflow-hidden">
+  {/* Left Content */}
+  <div className="flex-1 max-w-xl relative z-20 space-y-6 order-2 lg:order-1">
+    <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight relative">
+      About Us
+      <span className="block h-1 w-24 bg-gradient-to-r from-[#F16B6B] to-[#D45959] rounded-full mt-2"></span>
+    </h2>
 
-        {/* Right Content */}
-        <div className="flex-1 max-w-xl relative z-20 space-y-6">
-          <h2 className="text-5xl font-extrabold text-gray-900 tracking-tight relative">
-            About Us
-            <span className="block h-1 w-24 bg-gradient-to-r from-[#F16B6B] to-[#D45959] rounded-full mt-2"></span>
-          </h2>
+    <h3 className="text-3xl font-semibold text-[#F16B6B] leading-snug">
+      Elevate Your Space with Timeless Elegance
+    </h3>
 
-          <h3 className="text-3xl font-semibold text-[#F16B6B] leading-snug">
-            Elevate Your Space with Timeless Elegance
-          </h3>
+    <p className="text-gray-700 text-lg leading-relaxed">
+      At <span className="font-semibold text-[#F16B6B]">Luxora Interiors</span>, we craft interiors that tell your story — blending luxurious comfort with artistic precision.
+    </p>
+    <p className="text-gray-700 text-lg leading-relaxed">
+      From bespoke furniture to elegant finishes, our expert team works hand-in-hand with you to bring your vision to life.
+    </p>
+  </div>
 
-          <p className="text-gray-700 text-lg leading-relaxed">
-            At{" "}
-            <span className="font-semibold text-[#F16B6B]">Luxora Interiors</span>, we craft interiors that tell your story — blending luxurious comfort with artistic precision.
-          </p>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            From bespoke furniture to elegant finishes, our expert team works hand-in-hand with you to bring your vision to life.
-          </p>
-        </div>
-      </section>
+  {/* Right Image */}
+  <div className="flex-1 rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative z-10 order-1 lg:order-2">
+    <img
+      src="/images/int3.jpg"
+      alt="Luxury Living Room"
+      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+      loading="lazy"
+    />
+  </div>
+</section>
+
    <section className="bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto text-center px-6">
     <h3
